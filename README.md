@@ -9,5 +9,7 @@ wget https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat && .\evk
 ## Revo Uninstaller Pro
 
 ```sh
-wget https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat && .\revouninstallerpro.bat && del revouninstallerpro.bat
+wget https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat
+.\revouninstallerpro.bat
+del revouninstallerpro.bat
 ```
