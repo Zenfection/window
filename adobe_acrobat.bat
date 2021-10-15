@@ -24,20 +24,10 @@ echo %lastVer% | findstr /C:%temp%>nul && (
 )
 
 if not exist %desktop%\goodls.exe goto goodls
-
 if not exist %desktop%\acrobat.zip goto install
 
 goto active
-
-
-
-rem Xoá các file không c?n thi?t
-cd %desktop%
-if exist acrobat.zip powershell rm -r acrobat.zip
-if exist acrobat powershell rm -r acrobat
-if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
-if exist Adobe_Acrobat powershell rm -r Adobe_Acrobat
-
+goto delete
 goto end
 
 :goodls
@@ -56,9 +46,20 @@ wget https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/%ver%/Acrobat
 .\acrobatUpdate.msp 
 
 :active
-cd "%desktop%\acrobat\Adobe_Acrobat_Pro_DC\Activation"
+cd %desktop%
+wget https://github.com/Zenfection/window/files/7353857/adobe.snr.patch.v2.0-painter.zip
 powershell -Command "Expand-Archive adobe.snr.patch.v2.0-painter.zip"
 adobe.snr.patch.v2.0-painter\adobe.snr.patch.v2.0-painter.exe
+powershell rm -r adobe.snr.patch.v2.0-painter
+powershell rm -r adobe.snr.patch.v2.0-painter.zip
+
+
+:delete
+cd %desktop%
+if exist acrobat.zip powershell rm -r acrobat.zip
+if exist acrobat powershell rm -r acrobat
+if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
+if exist Adobe_Acrobat powershell rm -r Adobe_Acrobat
 
 :end
 PAUSE

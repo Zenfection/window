@@ -15,3 +15,11 @@ wget https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro
 .\revouninstallerpro.bat
 del revouninstallerpro.bat
 ```
+
+## Acrobat DC Pro
+
+```sh
+wget https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat
+.\adobe_acrobat.bat
+del adobe_acrobat.bat
+```
