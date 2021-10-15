@@ -21,6 +21,8 @@ echo %lastVer% | findstr /C:%temp%>nul && (
         EXIT
 ) || (
     goto installUpdate
+    goto active
+    goto end
 )
 
 if not exist %desktop%\goodls.exe goto goodls
@@ -63,3 +65,4 @@ if exist Adobe_Acrobat powershell rm -r Adobe_Acrobat
 
 :end
 PAUSE
+EXIT
