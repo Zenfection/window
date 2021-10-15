@@ -3,7 +3,7 @@
 SET desktop=C:\Users\%username%\Desktop\
 
 if not exist C:\EVKey mkdir C:\EVKey
-if exist %desktop%\EVKey.zip powershell rm -r %desktop%EVKey.zip
+if exist %desktop%\EVKey.zip ( powershell rm -r %desktop%EVKey.zip )
 if not exist C:\EVKey\evkau.exe (
     rem Install EVkey
     cd %desktop%
