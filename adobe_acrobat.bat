@@ -17,6 +17,7 @@ powershell rm 123.txt
 
 echo %lastVer% | findstr /C:%temp%>nul && (
         ECHO Now App is installed newest !!
+        goto install
         PAUSE
         EXIT
 ) || (
@@ -27,7 +28,6 @@ echo %lastVer% | findstr /C:%temp%>nul && (
 
 if not exist %desktop%\goodls.exe goto goodls
 if not exist %desktop%\acrobat.zip goto install
-
 goto active
 goto delete
 goto end
@@ -37,10 +37,9 @@ wget "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_window
 
 :install
 cd %desktop%
-powershell %desktop%\goodls.exe -u https://drive.google.com/file/d/1iQGThgTnCyKmRUIXsLm2ZPFEYNEMkLlC/view?usp=sharing -f acrobat.zip
-powershell -Command "Expand-Archive acrobat.zip -DestinationPath acrobat"
-start \acrobat\Adobe_Acrobat_Pro_DC\Acrobat_DC_Web_WWMUI.exe   
-"\Adobe Acrobat\Adobe Acrobat\Setup.exe"
+powershell %desktop%\goodls.exe -u https://drive.google.com/file/d/1TNu1Sb894j9L6PVhZ9PK8FwkBgGKU8vs/view?usp=sharing -f acrobat.zip
+powershell -Command "Expand-Archive acrobat.zip" 
+"acrobat\Adobe Acrobat\Setup.exe"
 
 :installUpdate
 cd %desktop%
@@ -61,7 +60,6 @@ cd %desktop%
 if exist acrobat.zip powershell rm -r acrobat.zip
 if exist acrobat powershell rm -r acrobat
 if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
-if exist Adobe_Acrobat powershell rm -r Adobe_Acrobat
 
 :end
 PAUSE
