@@ -1,6 +1,6 @@
 @echo off
 
-SET desktop=C:\Users\%username%\Desktop\
+SET desktop=C:\Users\%username%\Desktop
 
 if not exist C:\EVKey mkdir C:\EVKey
 if exist %desktop%\EVKey.zip ( del %desktop%EVKey.zip )
