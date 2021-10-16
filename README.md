@@ -3,41 +3,41 @@
 ## Must Have
 
 ```sh
-curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L check.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L
 "%cd%\check.bat"
 ```
 
 ## Evkey (`Lastest`)
 
 ```sh
-curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O -L evkey.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O -L
 "%cd%\evkey.bat"
 ```
 
 ## Revo Uninstaller Pro (`Lastest`)
 
 ```sh
-wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat -O revouninstallerpro.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat -O -L
 "%cd%\revouninstallerpro.bat"
 ```
 
 ## Acrobat DC Pro
 
 ```sh
-wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat -O adobe_acrobat.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat -O -L
 "%cd%\adobe_acrobat.bat"
 ```
 
 ## Minitool Wizard Pro (`12.5`)
 
 ```sh
-wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/minitool.bat -O minitool.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/minitool.bat -O -L
 "%cd%\minitool.bat"
 ```
 
 ## Movavi Video Convert Premiun  (`22.0`)
 
 ```sh
-wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/movavi.bat -O movavi.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/movavi.bat -O -L
 "%cd%\movavi.bat"
 ```
