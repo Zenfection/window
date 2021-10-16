@@ -34,6 +34,6 @@ if exist movavi powershell rm -r movavi
 if exist movavi.zip powershell rm -r movavi.zip
 
 :end 
-if exist %cd%\movavi.bat powershell rm -r %cd%\movavi.bat
+if exist C:\Users\%username%\movavi.bat del C:\Users\%username%\movavi.bat
 pause
 exit

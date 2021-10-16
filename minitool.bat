@@ -34,6 +34,6 @@ powershell rm -r minitool.zip
 powershell rm -r minitool
 
 :end
-if exist %cd%\minitool.bat powershell rm -r %cd%\minitool.bat
+if exist C:\Users\%username%\minitool.bat del C:\Users\%username%\minitool.bat
 pause
 exit
