@@ -15,19 +15,19 @@ if exist C:\EVKey\EVKey64.exe (
     goto end
 )
 
-
 :install
 cd "%desktop%"
 curl https://github.com/Zenfection/window/files/7357023/EVKey.zip -O -L
 if not exist C:\EVKey mkdir C:\EVKey
 powershell -Command "Expand-Archive EVKey.zip -DestinationPath C:\EVKey"
-"C:/EVkey/EVKey64.exe"
 
 :delete
 cd "%desktop%"
 if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
-if exist "%cur%\evkey.bat" del "%cur%\evkey.bat"
+"C:/EVkey/EVKey64.exe" 
+if exist "%cur%\evkey.bat" powershell rm -r "%cur%\evkey.bat"
+
 
 :end
 pause
