@@ -18,7 +18,8 @@ curl https://download.revouninstaller.com/download/RevoUninProSetup.exe -O -L
 cd %desktop%
 curl https://github.com/Zenfection/window/files/7353627/revouninstallerpro4.zip -O -L
 powershell -Command "Expand-Archive revouninstallerpro4.zip"
-move -y %desktop%\revouninstallerpro4\revouninstallerpro4.lic "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro\"
+del "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro\revouninstallerpro4.lic"
+move %desktop%\revouninstallerpro4\revouninstallerpro4.lic "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro\"
 
 
 :delete
