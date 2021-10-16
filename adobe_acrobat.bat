@@ -8,12 +8,15 @@ SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 
 
-goto check
-goto install
-goto installUpdate
-goto active
-goto delete
-goto end
+if not exist "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Acrobat.exe" (
+    goto install
+    goto installUpdate
+    goto active
+    goto delete
+    goto end
+) else (
+    goto checkVer
+)
 
 
 :check
