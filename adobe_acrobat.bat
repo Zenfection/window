@@ -32,7 +32,7 @@ echo %lastVer% | findstr /C:%temp%>nul && (
 cd "%desktop%"
 curl https://github.com/Zenfection/window/releases/download/%tag%/acrobat.zip -O -L
 powershell -Command "Expand-Archive acrobat.zip" 
-"%desktop%\acrobat\Adobe Acrobat\Setup.exe"
+"%desktop%\acrobat\Setup.exe"
 
 :installUpdate
 cd "%desktop%"
