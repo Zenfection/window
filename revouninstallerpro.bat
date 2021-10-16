@@ -27,7 +27,7 @@ cd "%desktop%"
 if exist RevoUninProSetup.exe powershell rm -r RevoUninProSetup.exe
 if exist revouninstallerpro4.zip powershell rm -r revouninstallerpro4.zip
 if exist revouninstallerpro4 powershell rm -r revouninstallerpro4
-if exist "%cur%\revouninstallerpro.bat" del "%cur%\revouninstallerpro.bat"
+if exist "%cur%\revouninstallerpro.bat" powershell rm -r "%cur%\revouninstallerpro.bat"
 
 :end
 pause

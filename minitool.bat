@@ -33,7 +33,7 @@ cd "%desktop%"
 powershell rm -r goodls.exe
 powershell rm -r minitool.zip 
 powershell rm -r minitool
-if exist "%cur%\minitool.bat" del "%cur%\minitool.bat"
+if exist "%cur%\minitool.bat" powershell rm -r "%cur%\minitool.bat"
 
 :end
 pause

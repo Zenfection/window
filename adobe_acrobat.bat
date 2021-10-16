@@ -61,6 +61,6 @@ if exist acrobat powershell rm -r acrobat
 if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
 
 :end
-if exist "%cur%\adobe_acrobat.bat" del "%cur%\adobe_acrobat.bat"
+if exist "%cur%\adobe_acrobat.bat" powershell rm -r "%cur%\adobe_acrobat.bat"
 PAUSE
 EXIT

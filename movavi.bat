@@ -33,7 +33,7 @@ sudo move "%desktop%\movavi\active\wtsapi32.dll" "C:\Users\%username%\AppData\Ro
 cd "%desktop%"
 if exist movavi powershell rm -r movavi
 if exist movavi.zip powershell rm -r movavi.zip
-if exist "%cur%\movavi.bat" del "%cur%\movavi.bat"
+if exist "%cur%\movavi.bat" powershell rm -r "%cur%\movavi.bat"
 
 :end 
 pause

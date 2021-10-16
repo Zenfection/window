@@ -18,7 +18,7 @@ powershell -Command "Expand-Archive must.zip"
 cd "%desktop%"
 powershell rm -r must.zip
 powershell rm -r must
-if exist "%cur%\check.bat" del "%cur%\check.bat"
+if exist "%cur%\check.bat" powershell rm -r "%cur%\check.bat"
 
 :end
 pause
