@@ -2,18 +2,29 @@
 
 title Install EVkey
 SET tag=1.1
+SET ver=4.3.7
+SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 SET cur=%cd%
 
-goto exist
+goto check
 goto install
 goto delete
 goto sucess
 goto end
 
-:exist
-if exist C:\EVKey\EVKey64.exe (
-    echo EVKey installed !!!
+
+:check 
+if exist "C:\EVKey\EVKey64.exe" goto checkVer
+
+:checkVer
+"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\EVKey\EVKey64.exe" > temp.txt
+set /p currentVer=<temp.txt
+del temp.txt
+rem can change version
+set currentVer=%currentVer:~0,5%
+if %currentVer% == %ver% (
+    echo EVKey installed newest version !!!
     goto end
 )
 
@@ -41,6 +52,6 @@ if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EVKey.lnk"(
 ) 
 
 :end
-echo Press any key to quit !!!
+echo Press any key to quit...
 pause >nul
 if exist "%cur%\evkey.bat" del "%cur%\evkey.bat" 
