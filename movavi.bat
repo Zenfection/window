@@ -1,5 +1,6 @@
 @echo off
 title Install Movavi Video Convert Premium 22.0
+SET tag=1.1
 SET desktop=C:\Users\%username%\Desktop
 SET cur=%cd%
 
@@ -12,7 +13,7 @@ goto end
 
 :goodls
 if not exist "%desktop%\goodls.exe" (
-   curl -o "%desktop%\goodls.exe" "https://github.com/Zenfection/window/releases/download/1.1/goodls.exe" -O -L
+   curl -o "%desktop%\goodls.exe" "https://github.com/Zenfection/window/releases/download/%tag%/goodls.exe" -O -L
 )
 
 :install

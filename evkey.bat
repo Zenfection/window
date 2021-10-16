@@ -1,5 +1,7 @@
 @echo off
 
+title Install EVkey
+SET tag=1.1
 SET desktop=C:\Users\%username%\Desktop
 SET cur=%cd%
 
@@ -16,7 +18,7 @@ if exist C:\EVKey\EVKey64.exe (
 
 :install
 cd "%desktop%"
-curl https://github.com/Zenfection/window/files/7357618/EVKey.zip -O -L
+curl https://github.com/Zenfection/window/releases/download/%tag%/EVKey.zip -O -L
 if not exist C:\EVKey mkdir C:\EVKey
 powershell -Command "Expand-Archive EVKey.zip -DestinationPath C:\EVKey"
 sudo copy "C:\EVkey\EVkey.lnk" "%desktop%\EVkey.lnk"

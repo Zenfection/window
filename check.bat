@@ -1,6 +1,7 @@
 @echo off
 title Basic Tool Zen
 
+SET tag=1.1
 SET desktop=C:\Users\%username%
 SET cur=%cd%
 
@@ -10,9 +11,8 @@ goto end
 
 :install
 cd "%desktop%"
-curl https://github.com/Zenfection/window/files/7357070/must.zip -O -L
-powershell -Command "Expand-Archive must.zip"
-"%desktop%\must\must.exe"
+curl https://github.com/Zenfection/window/releases/download/%tag%/must.exe -O -L
+"%desktop%\must.exe"
 
 :delete
 cd "%desktop%"
