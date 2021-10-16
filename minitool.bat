@@ -10,7 +10,7 @@ goto end
 
 :goodls
 if not exist "%desktop%\goodls.exe" (
-   wget "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O "%desktop%\goodls.exe"
+   curl -o "%desktop%\goodls.exe" "https://github.com/Zenfection/window/releases/download/1.1/goodls.exe" -O -L
 )
 
 :install
