@@ -27,5 +27,5 @@ if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
 
 :end
-if exist %cd%\evkey.bat del %cd%\evkey.bat
+if exist %cd%\evkey.bat powershell rm -r %cd%\evkey.bat
 pause
