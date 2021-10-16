@@ -7,6 +7,15 @@ SET cur=%cd%
 SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 
+
+goto check
+goto install
+goto installUpdate
+goto active
+goto delete
+goto end
+
+
 :check
 if exist "C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" goto checkVer
 
@@ -17,6 +26,12 @@ del temp.txt
 set currentVer=%currentVer:~0,10%
 if %currentVer% == %ver% (
     echo Adobe Acrobat DC Pro installed newest version !!!
+    goto end
+)
+else (
+    goto installUpdate
+    goto active
+    goto delete
     goto end
 )
 
