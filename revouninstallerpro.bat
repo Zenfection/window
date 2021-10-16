@@ -1,6 +1,7 @@
 @echo off
 
 SET desktop=C:\Users\%username%\Desktop
+SET cur=%cd%
 
 goto install
 goto active
@@ -28,5 +29,5 @@ if exist revouninstallerpro4.zip powershell rm -r revouninstallerpro4.zip
 if exist revouninstallerpro4 powershell rm -r revouninstallerpro4
 
 :end
-if exist %cd%\revouninstallerpro.bat del %cd%\revouninstallerpro.bat
+if exist %cur%\revouninstallerpro.bat del %cur%\revouninstallerpro.bat
 PAUSE

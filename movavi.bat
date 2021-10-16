@@ -1,6 +1,7 @@
 @echo off
 title Install Movavi Video Convert Premium 22.0
 SET desktop=C:\Users\%username%\Desktop
+SET cur=%cd%
 
 goto goodls
 goto install
@@ -34,6 +35,6 @@ if exist movavi powershell rm -r movavi
 if exist movavi.zip powershell rm -r movavi.zip
 
 :end 
-if exist C:\Users\%username%\movavi.bat del C:\Users\%username%\movavi.bat
+if exist %cur%\movavi.bat del %cur%\movavi.bat
 pause
 exit

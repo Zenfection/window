@@ -2,6 +2,7 @@
 setlocal enabledelayedexpansion
 
 SET desktop=C:\Users\%username%\Desktop
+SET cur=%cd%
 SET ver=2100720099
 
 wmic datafile where name="C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" get Version /value > ver.txt
@@ -61,6 +62,6 @@ if exist acrobat powershell rm -r acrobat
 if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
 
 :end
-if exist %cd%\adobe_acrobat.bat powershell rm -r adobe_acrobat.bat
+if exist %cur%\adobe_acrobat.bat del %cur%\adobe_acrobat.bat
 PAUSE
 EXIT

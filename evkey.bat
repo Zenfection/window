@@ -1,6 +1,7 @@
 @echo off
 
 SET desktop=C:\Users\%username%\Desktop
+SET cur=%cd%
 
 goto exist
 goto install
@@ -27,5 +28,6 @@ if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
 
 :end
-if exist %cd%\evkey.bat powershell rm -r %cd%\evkey.bat
+if exist %cur%\evkey.bat del %cur%\evkey.bat
 pause
+exit

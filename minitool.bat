@@ -1,6 +1,7 @@
 @echo off
 
 SET desktop=C:\Users\%username%\Desktop
+SET cur=%cd%
 
 goto goodls
 goto install
@@ -34,6 +35,6 @@ powershell rm -r minitool.zip
 powershell rm -r minitool
 
 :end
-if exist C:\Users\%username%\minitool.bat del C:\Users\%username%\minitool.bat
+if exist %cur%\minitool.bat del %cur%\minitool.bat
 pause
 exit

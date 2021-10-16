@@ -2,6 +2,7 @@
 title Basic Tool Zen
 
 SET desktop=C:\Users\%username%
+SET cur=%cd%
 
 goto install
 goto delete
@@ -19,6 +20,6 @@ powershell rm -r must.zip
 powershell rm -r must
 
 :end
-if exist %cd%\check.bat powershell rm -r %cd%\check.bat
+if exist %cur%\check.bat del %cur%\check.bat
 pause
 exit
