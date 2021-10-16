@@ -1,5 +1,6 @@
 @echo off
 
+SET tag=1.1
 SET desktop=C:\Users\%username%\Desktop
 SET cur=%cd%
 
@@ -16,8 +17,8 @@ curl -o revo.exe https://download.revouninstaller.com/download/RevoUninProSetup.
 
 :active
 cd "%desktop%"
-curl https://github.com/Zenfection/window/releases/download/1.1/revouninstallerpro4.lic -O -L
-sudo move "%desktop%\revouninstallerpro4\revouninstallerpro4.lic" "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro"
+curl https://github.com/Zenfection/window/releases/download/%tag%/revouninstallerpro4.lic -O -L
+sudo move "%desktop%\revouninstallerpro4.lic" "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro"
 
 
 :delete
