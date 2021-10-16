@@ -10,7 +10,7 @@ curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L ch
 ## Evkey (`Lastest`)
 
 ```sh
-wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O evkey.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O -L evkey.bat
 "%cd%\evkey.bat"
 ```
 
