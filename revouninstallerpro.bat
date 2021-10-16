@@ -10,13 +10,13 @@ goto end
 
 :install
 cd "%desktop%"
-wget https://download.revouninstaller.com/download/RevoUninProSetup.exe -O revo.exe
+curl -o revo.exe https://download.revouninstaller.com/download/RevoUninProSetup.exe -O -L
 "%desktop%\revo.exe"
 
 
 :active
 cd "%desktop%"
-wget https://github.com/Zenfection/window/files/7353627/revouninstallerpro4.zip -O revouninstallerpro4.zip
+curl https://github.com/Zenfection/window/files/7353627/revouninstallerpro4.zip -O -L
 powershell -Command "Expand-Archive revouninstallerpro4.zip"
 sudo del /S /Q "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro\revouninstallerpro4.lic"
 sudo move "%desktop%\revouninstallerpro4\revouninstallerpro4.lic" "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro\"
