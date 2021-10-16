@@ -23,9 +23,7 @@ sudo move "%desktop%\revouninstallerpro4.lic" "C:\ProgramData\VS Revo Group\Revo
 
 :delete
 cd "%desktop%"
-if exist RevoUninProSetup.exe powershell rm -r RevoUninProSetup.exe
-if exist revouninstallerpro4.zip powershell rm -r revouninstallerpro4.zip
-if exist revouninstallerpro4 powershell rm -r revouninstallerpro4
+if exist revo.exe powershell rm -r revo.exe
 
 :end
 if exist "%cur%\revouninstallerpro.bat" powershell rm -r "%cur%\revouninstallerpro.bat"
