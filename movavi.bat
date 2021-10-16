@@ -1,19 +1,32 @@
 @echo off
-title Install Movavi Video Convert Premium 22.0
-SET tag=1.1
-SET desktop=C:\Users\%username%\Desktop
-SET cur=%cd%
+title Install Movavi Video Convert Premium
 
-goto goodls
+SET tag=1.1
+SET ver=22.0
+SET cur=%cd%
+SET home=C:\ToolZen
+SET desktop=C:\Users\%username%\Desktop
+
+goto check
 goto install
 goto delete
 goto active
 goto end
 
 
-:goodls
-if not exist "%desktop%\goodls.exe" (
-   curl -o "%desktop%\goodls.exe" "https://github.com/Zenfection/window/releases/download/%tag%/goodls.exe" -O -L
+:check
+if exist "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" goto checkVer
+
+:checkVer
+"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" > temp.txt
+set /p currentVer=<temp.txt
+del temp.txt
+rem --can change version--
+set currentVer=%currentVer:~0,4% 
+if %currentVer% == %ver% (
+   echo Movavi Video Convert Premium installed newest version !!!
+   pause
+   goto end
 )
 
 :install
@@ -33,7 +46,8 @@ sudo move "%desktop%\movavi\active\wtsapi32.dll" "C:\Users\%username%\AppData\Ro
 cd "%desktop%"
 if exist movavi powershell rm -r movavi
 if exist movavi.zip powershell rm -r movavi.zip
-if exist "%cur%\movavi.bat" powershell rm -r "%cur%\movavi.bat"
 
 :end 
-pause
+echo Press any key to quit...
+pause >nul
+if exist "%cur%\movavi.bat" powershell rm -r "%cur%\movavi.bat"

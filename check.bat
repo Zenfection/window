@@ -18,8 +18,8 @@ curl https://github.com/Zenfection/window/releases/download/%tag%/must.exe -O -L
 cd "%desktop%"
 powershell rm -r must.zip
 powershell rm -r must
-if exist "%cur%\check.bat" powershell rm -r "%cur%\check.bat"
 
 :end
 pause
+if exist "%cur%\check.bat" powershell rm -r "%cur%\check.bat"
 exit

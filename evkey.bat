@@ -7,8 +7,8 @@ SET cur=%cd%
 
 goto exist
 goto install
-goto sucess
 goto delete
+goto sucess
 goto end
 
 :exist
@@ -34,10 +34,13 @@ if exist EVKey powershell rm -r EVKey
 :success
 if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EVKey.lnk"(
     echo Install EVkey Successful, Open it in Desktop
+    goto end
 ) else (
     echo Install Failed, Let tell me !!!!
+    goto end
 ) 
 
 :end
+echo Press any key to quit !!!
+pause >nul
 if exist "%cur%\evkey.bat" del "%cur%\evkey.bat" 
-pause

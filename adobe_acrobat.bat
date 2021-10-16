@@ -1,9 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
 
-SET desktop=C:\Users\%username%\Desktop
-SET cur=%cd%
+SET tag=1.1
 SET ver=2100720099
+SET cur=%cd%
+SET home=C:\ToolZen
+SET desktop=C:\Users\%username%\Desktop
+
 
 wmic datafile where name="C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" get Version /value > ver.txt
 type ver.txt | findstr /v "^$" > 123.txt
