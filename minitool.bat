@@ -2,6 +2,7 @@
 
 SET desktop=C:\Users\%username%\Desktop
 SET cur=%cd%
+SET tag=1.1
 
 goto install
 goto active
@@ -9,7 +10,7 @@ goto end
 
 :install
 cd "%desktop%"
-curl https://github.com/Zenfection/window/releases/download/1.1/minitool.zip -O -L
+curl https://github.com/Zenfection/window/releases/download/%tag%/minitool.zip -O -L
 powershell -Command "Expand-Archive minitool.zip" 
 "%desktop%\minitool\Setup.exe"
 
