@@ -5,6 +5,7 @@ SET cur=%cd%
 
 goto exist
 goto install
+goto delete
 goto end
 
 :exist
