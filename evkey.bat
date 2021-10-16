@@ -28,4 +28,3 @@ if exist EVKey powershell rm -r EVKey
 
 :end
 pause
-exit

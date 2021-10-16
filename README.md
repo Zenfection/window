@@ -14,7 +14,6 @@ del %cd%check.bat
 wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O evkey.bat
 %cd%\evkey.bat
 del %cd%\evkey.bat 
-
 ```
 
 ## Revo Uninstaller Pro
