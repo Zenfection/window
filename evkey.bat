@@ -2,6 +2,7 @@
 
 SET desktop=C:\Users\%username%\Desktop
 
+sudo
 goto exist
 goto install
 goto end
