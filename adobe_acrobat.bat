@@ -17,10 +17,10 @@ goto end
 
 
 :check
-if exist "C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" goto checkVer
+if exist "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Acrobat.exe" goto checkVer
 
 :checkVer
-%home%\sigcheck.exe -accepteula -nobanner -n "C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" > temp.txt
+%home%\sigcheck.exe -accepteula -nobanner -n "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Acrobat.exe" > temp.txt
 set /p currentVer=<temp.txt
 del temp.txt
 set currentVer=%currentVer:~0,10%
