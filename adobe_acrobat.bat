@@ -61,5 +61,6 @@ if exist acrobat powershell rm -r acrobat
 if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
 
 :end
+if exist %cd%\adobe_acrobat.bat powershell rm -r adobe_acrobat.bat
 PAUSE
 EXIT

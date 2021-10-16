@@ -26,5 +26,11 @@ wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/
 ```sh
 wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat -O adobe_acrobat.bat
 %cd%\adobe_acrobat.bat
-del %cd%\adobe_acrobat.bat
+```
+
+## Minitool Wizard Pro
+
+```sh
+wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/minitool.bat -O minitool.bat
+%cd%\minitool.bat
 ```
