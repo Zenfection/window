@@ -2,24 +2,28 @@
 
 SET desktop=C:\Users\%username%\Desktop
 
-if not exist C:\EVKey mkdir C:\EVKey
-if exist %desktop%\EVKey.zip ( del %desktop%EVKey.zip )
+goto exist
+goto install
+goto end
 
+:exist
 if exist C:\EVKey\evkau.exe (
     echo EVKey installed !!!
-    pause
-    exit
+    goto end
 )
 
-rem Install EVkey
+
+:install
 cd %desktop%
-wget "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKey.zip"
+wget https://github.com/Zenfection/window/files/7357023/EVKey.zip -O EVKey.zip
+if not exist C:\EVKey mkdir C:\EVKey
 powershell -Command "Expand-Archive EVKey.zip -DestinationPath C:\EVKey"
 C:/EVkey/EVKey64.exe
 
-rem Delete all file not necessary
-if exist C:\EVKey\EVKey32.exe powershell rm -r C:\EVKey\EVKey32.exe
-if C:\EVKey\SHA256.txt powershell rm -r C:\EVKey\SHA256.txt
-if %desktop%\EVKey.zip powershell rm -r %desktop%\EVKey.zip
-    
+:delete
+cd %desktop%
+if exist EVKey.zip powershell rm -r EVKey.zip
+if exist EVKey powershell rm -r EVKey
+
+:end
 PAUSE
