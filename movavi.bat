@@ -25,7 +25,6 @@ rem --can change version--
 set currentVer=%currentVer:~0,4% 
 if %currentVer% == %ver% (
    echo Movavi Video Convert Premium installed newest version !!!
-   pause
    goto end
 )
 
