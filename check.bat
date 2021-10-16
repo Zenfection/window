@@ -1,7 +1,7 @@
 @echo off
 title Basic Tool Zen
 
-SET desktop=C:\Users\%username%\Desktop
+SET desktop=C:\Users\%username%
 
 goto install
 goto delete
