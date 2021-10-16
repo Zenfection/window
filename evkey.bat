@@ -5,7 +5,6 @@ SET desktop=C:\Users\%username%\Desktop
 goto exist
 goto install
 goto delete
-goto end
 
 :exist
 if exist C:\EVKey\EVKey64.exe (
