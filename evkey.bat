@@ -7,6 +7,7 @@ SET cur=%cd%
 
 goto exist
 goto install
+goto sucess
 goto delete
 goto end
 
@@ -29,6 +30,13 @@ cd "%desktop%"
 if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
 
+
+:sucess
+if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EVKey.lnk"(
+    echo Cài ??t thành công, hãy m? n? trên Desktop
+) else (
+    echo Cài ??t th?t b?i !!!, hãy báo l?i cho tôi
+) 
 
 :end
 if exist "%cur%\evkey.bat" del "%cur%\evkey.bat" 
