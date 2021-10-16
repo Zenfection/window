@@ -7,11 +7,14 @@ SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 SET cur=%cd%
 
-goto check
-goto install
-goto delete
-goto sucess
-goto end
+
+if not exist "C:\EVKey\EVKey64.exe" (
+    goto install
+    goto delete
+    goto end
+) else (
+    goto checkVer
+)
 
 
 :check 
@@ -40,16 +43,6 @@ sudo move "C:\EVkey\EVkey.lnk"  "C:\ProgramData\Microsoft\Windows\Start Menu\Pro
 cd "%desktop%"
 if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
-
-
-:success
-if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EVKey.lnk"(
-    echo Install EVkey Successful, Open it in Desktop
-    goto end
-) else (
-    echo Install Failed, Let tell me !!!!
-    goto end
-) 
 
 :end
 echo Press any key to quit...
