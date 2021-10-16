@@ -12,9 +12,9 @@ del check.bat
 ## Evkey
 
 ```sh
-cd Desktop ||
-curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O -L ||
-.\evkey.bat ||
+cd Desktop 
+curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O -L
+.\evkey.bat
 del evkey.bat 
 ```
 
