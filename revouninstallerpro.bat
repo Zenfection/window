@@ -3,6 +3,7 @@
 SET desktop=C:\Users\%username%\Desktop
 
 
+sudo
 goto install
 goto active
 goto delete
