@@ -17,13 +17,12 @@ goto end
 if exist "C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe" goto checkVer
 
 :checkVer
-"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe" > temp.txt
+%home%\sigcheck.exe -accepteula -nobanner -n "C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe" > temp.txt
 set /p currentVer=<temp.txt
 del temp.txt
 set currentVer=%currentVer:~0,5%
 if %currentVer% == %ver% (
    echo RevoUninPro installed newest version !!!
-   pause
    goto end
 )
 
@@ -45,5 +44,6 @@ cd "%desktop%"
 if exist revo.exe powershell rm -r revo.exe
 
 :end
+echo Press any key to quit...
+pause >nul
 if exist "%cur%\revouninstallerpro.bat" powershell rm -r "%cur%\revouninstallerpro.bat"
-pause

@@ -2,34 +2,30 @@
 setlocal enabledelayedexpansion
 
 SET tag=1.1
-SET ver=2100720099
+SET ver=21.7.20099
 SET cur=%cd%
 SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 
 
 wmic datafile where name="C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" get Version /value > ver.txt
-type ver.txt | findstr /v "^$" > 123.txt
-set /p lastVer=<123.txt
-set lastVer=%lastVer: =%
-set lastVer=%lastVer:.=%
-set lastVer=%lastVer:~8%
-set temp=%ver:~4,6%
-del ver.txt
-del 123.txt
 
-echo %lastVer% | findstr /C:%temp%>nul && (
-    echo Now App is installed newest !!
-    goto installUpdate
-    goto active
-    goto delete
-    goto end
-) || (
-    goto install
-    goto installUpdate
-    goto active
+
+
+:check
+if exist "C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" goto checkVer
+
+:checkVer
+%home%\sigcheck.exe -accepteula -nobanner -n "C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" > temp.txt
+set /p currentVer=<temp.txt
+del temp.txt
+set currentVer=%currentVer:~0,10%
+if %currentVer% == %ver% (
+    echo Adobe Acrobat DC Pro installed newest version !!!
     goto end
 )
+
+
 
 :install
 cd "%desktop%"
@@ -39,7 +35,7 @@ powershell -Command "Expand-Archive acrobat.zip"
 
 :installUpdate
 cd "%desktop%"
-curl -o acrobatUpdate.msp https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/%ver%/AcrobatDCUpd%ver%.msp -O -L
+curl -o acrobatUpdate.msp https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2100720099AcrobatDCUpd%ver%.msp -O -L
 "%desktop%\acrobatUpdate.msp"
 
 :active
@@ -58,6 +54,7 @@ if exist acrobat powershell rm -r acrobat
 if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
 
 :end
+echo Press any key to quit...
+pause >nul
 if exist "%cur%\adobe_acrobat.bat" powershell rm -r "%cur%\adobe_acrobat.bat"
-PAUSE
 EXIT

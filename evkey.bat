@@ -18,7 +18,7 @@ goto end
 if exist "C:\EVKey\EVKey64.exe" goto checkVer
 
 :checkVer
-"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\EVKey\EVKey64.exe" > temp.txt
+%home%\sigcheck.exe -accepteula -nobanner -n "C:\EVKey\EVKey64.exe" > temp.txt
 set /p currentVer=<temp.txt
 del temp.txt
 rem can change version

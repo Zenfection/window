@@ -18,7 +18,7 @@ goto end
 if exist "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" goto checkVer
 
 :checkVer
-"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" > temp.txt
+%home%\sigcheck.exe -accepteula -nobanner -n "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" > temp.txt
 set /p currentVer=<temp.txt
 del temp.txt
 rem --can change version--
