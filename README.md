@@ -3,7 +3,7 @@
 ## Must Have
 
 ```sh
-curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat --output check.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L
 .\check.bat
 del check.bat
 ```
