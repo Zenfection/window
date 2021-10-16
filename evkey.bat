@@ -31,5 +31,5 @@ if exist EVKey powershell rm -r EVKey
 
 
 :end
-if exist "%cur%\evkey.bat" powershell rm -r "%cur%\evkey.bat" 
+if exist "%cur%\evkey.bat" del "%cur%\evkey.bat" 
 pause
