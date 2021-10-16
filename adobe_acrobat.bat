@@ -7,7 +7,6 @@ SET ver=2100720099
 wmic datafile where name="C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" get Version /value > ver.txt
 type ver.txt | findstr /v "^$" > 123.txt
 set /p lastVer=<123.txt
-set /p lastVer=<123.txt
 set lastVer=%lastVer: =%
 set lastVer=%lastVer:.=%
 set lastVer=%lastVer:~8%
