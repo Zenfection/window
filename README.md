@@ -3,7 +3,7 @@
 ## Must Have
 
 ```sh
-wget https://raw.githubusercontent.com/Zenfection/window/main/check.bat  && .\check.bat && del check.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat --output check.bat && .\check.bat && del check.bat
 ```
 
 ## Evkey
