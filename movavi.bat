@@ -22,10 +22,10 @@ powershell -Command "Expand-Archive movavi.zip"
 %desktop%\movavi\Setup.exe
 
 :active
-sudo del /S /Q "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium\bb2018.dll"
-sudo del /S /Q "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium\wtsapi32.dll"
-sudo move %desktop%\movavi\active\bb2018.dll "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium"
-sudo move %desktop%\movavi\active\wtsapi32.dll "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium"
+sudo del /S /Q "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium\bb2018.dll"
+sudo del /S /Q "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium\wtsapi32.dll"
+sudo move %desktop%\movavi\active\bb2018.dll "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium"
+sudo move %desktop%\movavi\active\wtsapi32.dll "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium"
 
 
 :delete
