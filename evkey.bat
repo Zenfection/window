@@ -12,6 +12,7 @@ goto end
 :exist
 if exist C:\EVKey\EVKey64.exe (
     echo EVKey installed !!!
+    if exist "%cur%\evkey.bat" del "%cur%\evkey.bat"
     goto end
 )
 
