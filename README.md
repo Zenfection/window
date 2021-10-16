@@ -38,5 +38,6 @@ wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/
 ## Movavi Video Convert Premiun  (`22.0`)
 
 ```sh
-
+wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/movavi.bat -O movavi.bat
+%cd%\movavi.bat
 ```
