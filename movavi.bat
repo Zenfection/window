@@ -17,7 +17,7 @@ if not exist "%desktop%\goodls.exe" (
 
 
 :install
-"cd %desktop%"
+cd "%desktop%"
 powershell "%desktop%\goodls.exe" -u https://drive.google.com/file/d/1sYUYOFSVIKC0OnraxDjJQ_ZuGe9S6fhD/view?usp=sharing -f movavi.zip
 powershell -Command "Expand-Archive movavi.zip"
 "%desktop%\movavi\Setup.exe"
@@ -30,7 +30,7 @@ sudo move "%desktop%\movavi\active\wtsapi32.dll" "C:\Users\%username%\AppData\Ro
 
 
 :delete
-"cd %desktop%"
+cd "%desktop%"
 if exist movavi powershell rm -r movavi
 if exist movavi.zip powershell rm -r movavi.zip
 if exist "%cur%\movavi.bat" del "%cur%\movavi.bat"
