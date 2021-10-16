@@ -13,7 +13,7 @@ del check.bat
 
 ```sh
 cd Desktop 
-curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat 
+wget https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat 
 .\evkey.bat
 del evkey.bat 
 ```
