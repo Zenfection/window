@@ -1,13 +1,32 @@
 @echo off
 
 SET tag=1.1
-SET desktop=C:\Users\%username%\Desktop
+SET ver=4.5.0
 SET cur=%cd%
+SET home=C:\ToolZen
+SET desktop=C:\Users\%username%\Desktop
 
+goto checkVer
 goto install
 goto active
 goto delete
 goto end
+
+
+:check
+if exist "C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe" goto checkVer
+
+:checkVer
+"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe" > temp.txt
+set /p currentVer=<temp.txt
+del temp.txt
+set currentVer=%currentVer:~0,5%
+if %currentVer% == %ver% (
+   echo RevoUninPro installed newest version !!!
+   pause
+   goto end
+)
+
 
 :install
 cd "%desktop%"
