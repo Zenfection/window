@@ -5,6 +5,7 @@ SET desktop=C:\Users\%username%\Desktop
 goto exist
 goto install
 goto delete
+goto end
 
 :exist
 if exist C:\EVKey\EVKey64.exe (
@@ -26,4 +27,5 @@ if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
 
 :end
+if exist %cd%\evkey.bat del %cd%\evkey.bat
 pause
