@@ -22,36 +22,30 @@ echo %lastVer% | findstr /C:%temp%>nul && (
     goto delete
     goto end
 ) || (
-    goto goodls
     goto install
     goto installUpdate
     goto active
     goto end
 )
 
-:goodls
-if not exist "%desktop%\goodls.exe" (
-    curl -o "%desktop%\goodls.exe" "https://github.com/Zenfection/window/releases/download/1.1/goodls.exe" -O -L
-)
-
 :install
 cd "%desktop%"
-powershell %desktop%\goodls.exe -u https://drive.google.com/file/d/1TNu1Sb894j9L6PVhZ9PK8FwkBgGKU8vs/view?usp=sharing -f acrobat.zip
+curl https://github.com/Zenfection/window/releases/download/%tag%/acrobat.zip -O -L
 powershell -Command "Expand-Archive acrobat.zip" 
-"%desktop%acrobat\acrobat\Adobe Acrobat\Setup.exe"
+"%desktop%\acrobat\Adobe Acrobat\Setup.exe"
 
 :installUpdate
 cd "%desktop%"
 curl -o acrobatUpdate.msp https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/%ver%/AcrobatDCUpd%ver%.msp -O -L
-%desktop%\acrobatUpdate.msp 
+"%desktop%\acrobatUpdate.msp"
 
 :active
 cd "%desktop%"
-curl https://github.com/Zenfection/window/files/7353857/adobe.snr.patch.v2.0-painter.zip -O -L
-powershell -Command "Expand-Archive adobe.snr.patch.v2.0-painter.zip"
-%desktop%\adobe.snr.patch.v2.0-painter\adobe.snr.patch.v2.0-painter.exe
-powershell rm -r adobe.snr.patch.v2.0-painter
-powershell rm -r adobe.snr.patch.v2.0-painter.zip
+curl https://github.com/Zenfection/window/releases/download/%tag%/activeAdobe.exe -O -L
+curl https://github.com/Zenfection/window/releases/download/%tag%/fixAcrobat_x64.reg -O -L
+"%desltop%\activeAdobe.exe"
+"%desktop%\fixAcrobat_x64.reg"
+del activeAdobe.exe
 
 
 :delete
