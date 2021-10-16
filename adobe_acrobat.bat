@@ -12,28 +12,27 @@ set lastVer=%lastVer: =%
 set lastVer=%lastVer:.=%
 set lastVer=%lastVer:~8%
 set temp=%ver:~4,6%
-powershell rm ver.txt
-powershell rm 123.txt
+del ver.txt
+del 123.txt
 
 echo %lastVer% | findstr /C:%temp%>nul && (
-        ECHO Now App is installed newest !!
-        goto install
-        PAUSE
-        EXIT
+    echo Now App is installed newest !!
+    goto installUpdate
+    goto active
+    goto delete
+    goto end
 ) || (
+    goto goodls
+    goto install
     goto installUpdate
     goto active
     goto end
 )
 
-if not exist %desktop%\goodls.exe goto goodls
-if not exist %desktop%\acrobat.zip goto install
-goto active
-goto delete
-goto end
-
 :goodls
-wget --no-check-certificate "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O %desktop%\goodls.exe
+if not exist %desktop%\goodls.exe (
+    wget --no-check-certificate "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O %desktop%\goodls.exe
+)
 
 :install
 cd %desktop%
