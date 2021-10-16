@@ -20,3 +20,4 @@ powershell rm -r must
 
 :end
 pause
+exit
