@@ -7,11 +7,6 @@ SET cur=%cd%
 SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 
-
-wmic datafile where name="C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" get Version /value > ver.txt
-
-
-
 :check
 if exist "C:\\Program Files (x86)\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe" goto checkVer
 
