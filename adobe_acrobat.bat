@@ -31,7 +31,7 @@ echo %lastVer% | findstr /C:%temp%>nul && (
 
 :goodls
 if not exist "%desktop%\goodls.exe" (
-    curl -o "%desktop%\goodls.exe" "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O -L
+    wget "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O "%desktop%\goodls.exe"
 )
 
 :install
