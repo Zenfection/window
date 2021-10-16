@@ -30,4 +30,5 @@ if exist revouninstallerpro4.zip powershell rm -r revouninstallerpro4.zip
 if exist revouninstallerpro4 powershell rm -r revouninstallerpro4
 
 :end
+if exist %cd%\revouninstallerpro.bat del %cd%\revouninstallerpro.bat
 PAUSE

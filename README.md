@@ -20,7 +20,6 @@ wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/
 ```sh
 wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat -O revouninstallerpro.bat
 %cd%\revouninstallerpro.bat
-del %cd%\revouninstallerpro.bat
 ```
 
 ## Acrobat DC Pro
