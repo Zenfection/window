@@ -4,15 +4,15 @@
 
 ```sh
 wget https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O check.bat
-.\check.bat
-del check.bat
+%cd%\check.bat
+del %cd%check.bat
 ```
 
 ## Evkey
 
 ```sh
 wget https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O evkey.bat
-.\evkey.bat
+%cd%\evkey.bat
 del evkey.bat 
 
 ```
@@ -21,14 +21,14 @@ del evkey.bat
 
 ```sh
 wget https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat -O revouninstallerpro.bat
-.\revouninstallerpro.bat
-del revouninstallerpro.bat
+%cd%\revouninstallerpro.bat
+del %cd%\revouninstallerpro.bat
 ```
 
 ## Acrobat DC Pro
 
 ```sh
-curl https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat -O adobe_acrobat.bat
-.\adobe_acrobat.bat
-del adobe_acrobat.bat
+wget https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat -O adobe_acrobat.bat
+%cd%\adobe_acrobat.bat
+del %cd%\adobe_acrobat.bat
 ```
