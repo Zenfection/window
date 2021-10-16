@@ -32,7 +32,7 @@ goto delete
 goto end
 
 :goodls
-wget "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O %desktop%\goodls.exe
+wget --no-check-certificate "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O %desktop%\goodls.exe
 
 :install
 cd %desktop%
@@ -42,12 +42,12 @@ powershell -Command "Expand-Archive acrobat.zip"
 
 :installUpdate
 cd %desktop%
-wget https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/%ver%/AcrobatDCUpd%ver%.msp -O acrobatUpdate.msp
+wget --no-check-certificate https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/%ver%/AcrobatDCUpd%ver%.msp -O acrobatUpdate.msp
 .\acrobatUpdate.msp 
 
 :active
 cd %desktop%
-wget https://github.com/Zenfection/window/files/7353857/adobe.snr.patch.v2.0-painter.zip
+wget --no-check-certificate https://github.com/Zenfection/window/files/7353857/adobe.snr.patch.v2.0-painter.zip
 powershell -Command "Expand-Archive adobe.snr.patch.v2.0-painter.zip"
 adobe.snr.patch.v2.0-painter\adobe.snr.patch.v2.0-painter.exe
 powershell rm -r adobe.snr.patch.v2.0-painter
