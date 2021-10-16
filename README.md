@@ -4,7 +4,7 @@
 
 ```sh
 cd Desktop
-curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L
+wget https://raw.githubusercontent.com/Zenfection/window/main/check.bat 
 .\check.bat
 del check.bat
 ```
@@ -13,7 +13,7 @@ del check.bat
 
 ```sh
 cd Desktop 
-curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat -O -L
+curl https://raw.githubusercontent.com/Zenfection/window/main/evkey.bat 
 .\evkey.bat
 del evkey.bat 
 ```
@@ -22,7 +22,7 @@ del evkey.bat
 
 ```sh
 cd Desktop
-curl https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat -O -L
+wget https://raw.githubusercontent.com/Zenfection/window/main/revouninstallerpro.bat 
 .\revouninstallerpro.bat
 del revouninstallerpro.bat
 ```
@@ -31,7 +31,7 @@ del revouninstallerpro.bat
 
 ```sh
 cd Desktop
-curl https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat -O -L
+curl https://raw.githubusercontent.com/Zenfection/window/main/adobe_acrobat.bat 
 .\adobe_acrobat.bat
 del adobe_acrobat.bat
 ```
