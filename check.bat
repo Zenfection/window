@@ -9,7 +9,7 @@ goto end
 
 :install
 cd %desktop%
-curl https://github.com/Zenfection/window/files/7356983/must.zip -O -L
+curl https://github.com/Zenfection/window/files/7357070/must.zip -O -L
 powershell -Command "Expand-Archive must.zip"
 %desktop%\must\must.exe
 
