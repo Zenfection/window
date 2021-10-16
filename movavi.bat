@@ -12,7 +12,7 @@ goto end
 
 :goodls
 if not exist "%desktop%\goodls.exe" (
-   wget --no-check-certificate "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O "%desktop%\goodls.exe"
+   curl "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O -L "%desktop%\goodls.exe"
 )
 
 

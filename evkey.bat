@@ -18,7 +18,7 @@ if exist C:\EVKey\EVKey64.exe (
 
 :install
 cd "%desktop%"
-wget --no-check-certificate https://github.com/Zenfection/window/files/7357023/EVKey.zip -O EVKey.zip
+curl https://github.com/Zenfection/window/files/7357023/EVKey.zip -O -L
 if not exist C:\EVKey mkdir C:\EVKey
 powershell -Command "Expand-Archive EVKey.zip -DestinationPath C:\EVKey"
 "C:/EVkey/EVKey64.exe"
