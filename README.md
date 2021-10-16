@@ -3,7 +3,7 @@
 ## Must Have
 
 ```sh
-curl --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L check.bat
+curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L check.bat
 "%cd%\check.bat"
 ```
 
