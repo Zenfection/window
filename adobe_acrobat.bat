@@ -45,16 +45,17 @@ powershell -Command "Expand-Archive acrobat.zip"
 
 :installUpdate
 cd "%desktop%"
-curl -o acrobatUpdate.msp https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2100720099AcrobatDCUpd%ver%.msp -O -L
+curl -o acrobatUpdate.msp https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2100720099/AcrobatDCUpd2100720099.msp -O -L
 "%desktop%\acrobatUpdate.msp"
 
 :active
 cd "%desktop%"
 curl https://github.com/Zenfection/window/releases/download/%tag%/activeAdobe.exe -O -L
 curl https://github.com/Zenfection/window/releases/download/%tag%/fixAcrobat_x64.reg -O -L
-"%desltop%\activeAdobe.exe"
-"%desktop%\fixAcrobat_x64.reg"
+start activeAdobe.exe
+start fixAcrobat_x64.reg
 del activeAdobe.exe
+del fixAcrobat_x64.reg
 
 
 :delete
