@@ -19,9 +19,6 @@ if not exist "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Acrobat.exe" (
 )
 
 
-:check
-if exist "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Acrobat.exe" goto checkVer
-
 :checkVer
 %home%\sigcheck.exe -accepteula -nobanner -n "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Acrobat.exe" > temp.txt
 set /p currentVer=<temp.txt
