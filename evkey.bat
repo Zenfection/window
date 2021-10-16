@@ -1,5 +1,4 @@
 @echo off
-chcp 65001
 
 title Install EVkey
 SET tag=1.1
@@ -32,11 +31,11 @@ if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
 
 
-:sucess
+:success
 if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EVKey.lnk"(
-    echo Cài ??t thành công, hãy m? n? trên Desktop
+    echo Install EVkey Successful, Open it in Desktop
 ) else (
-    echo Cài ??t th?t b?i !!!, hãy báo l?i cho tôi
+    echo Install Failed, Let tell me !!!!
 ) 
 
 :end
