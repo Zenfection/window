@@ -8,32 +8,23 @@ goto install
 goto active
 goto end
 
-:goodls
-if not exist "%desktop%\goodls.exe" (
-   curl -o "%desktop%\goodls.exe" "https://github.com/Zenfection/window/releases/download/1.1/goodls.exe" -O -L
-)
-
 :install
 cd "%desktop%"
-powershell "%desktop%\goodls.exe" -u https://drive.google.com/file/d/1wcjGA1N25Nc4nupun4-SrFFCtjtA0r4c/view?usp=sharing -f minitool.zip
+curl https://github.com/Zenfection/window/releases/download/1.1/minitool.zip -O -L
 powershell -Command "Expand-Archive minitool.zip" 
 "%desktop%\minitool\Setup.exe"
 
 
 :active
-sudo del /S /Q "C:\Program Files\MiniTool Partition Wizard 12\partitionwizard.dll"
-sudo del /S /Q "C:\Program Files\MiniTool Partition Wizard 12\partitionwizard.exe"
-sudo del /S /Q "C:\Program Files\MiniTool Partition Wizard 12\partitionwizard.exe.mfh"
 sudo move "%desktop%\minitool\active\partitionwizard.dll" "C:\Program Files\MiniTool Partition Wizard 12\"
 sudo move "%desktop%\minitool\active\partitionwizard.exe" "C:\Program Files\MiniTool Partition Wizard 12\"
 sudo move "%desktop%\minitool\active\partitionwizard.exe.mfh" "C:\Program Files\MiniTool Partition Wizard 12\"
 
 :delete
 cd "%desktop%"
-powershell rm -r goodls.exe
 powershell rm -r minitool.zip 
 powershell rm -r minitool
-if exist "%cur%\minitool.bat" powershell rm -r "%cur%\minitool.bat"
+if exist "%cur%\minitool.bat" del "%cur%\minitool.bat"
 
 :end
 pause
