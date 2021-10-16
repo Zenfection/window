@@ -38,7 +38,7 @@ if not exist %desktop%\goodls.exe (
 cd %desktop%
 powershell %desktop%\goodls.exe -u https://drive.google.com/file/d/1TNu1Sb894j9L6PVhZ9PK8FwkBgGKU8vs/view?usp=sharing -f acrobat.zip
 powershell -Command "Expand-Archive acrobat.zip" 
-"acrobat\Adobe Acrobat\Setup.exe"
+"%desktop%acrobat\Adobe Acrobat\Setup.exe"
 
 :installUpdate
 cd %desktop%

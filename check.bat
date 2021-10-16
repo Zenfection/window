@@ -20,6 +20,6 @@ powershell rm -r must.zip
 powershell rm -r must
 
 :end
-if exist %cur%\check.bat del %cur%\check.bat
+if exist "%cur%\check.bat" del "%cur%\check.bat"
 pause
 exit
