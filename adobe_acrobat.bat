@@ -27,8 +27,7 @@ set currentVer=%currentVer:~0,10%
 if %currentVer% == %ver% (
     echo Adobe Acrobat DC Pro installed newest version !!!
     goto end
-)
-else (
+) else (
     goto installUpdate
     goto active
     goto delete
