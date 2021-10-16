@@ -19,5 +19,6 @@ powershell rm -r must.zip
 powershell rm -r must
 
 :end
+if exist %cd%\check.bat del %cd%\check.bat
 pause
 exit

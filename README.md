@@ -5,7 +5,6 @@
 ```sh
 wget --no-check-certificate https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O check.bat
 %cd%\check.bat
-del %cd%check.bat
 ```
 
 ## Evkey
