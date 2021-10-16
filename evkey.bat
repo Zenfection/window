@@ -1,4 +1,5 @@
 @echo off
+chcp 65001
 
 title Install EVkey
 SET tag=1.1
