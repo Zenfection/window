@@ -31,22 +31,22 @@ echo %lastVer% | findstr /C:%temp%>nul && (
 
 :goodls
 if not exist %desktop%\goodls.exe (
-    wget --no-check-certificate "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O %desktop%\goodls.exe
+    wget --no-check-certificate "https://github.com/tanaikech/goodls/releases/download/v1.2.7/goodls_windows_amd64.exe" -O "%desktop%\goodls.exe"
 )
 
 :install
-cd %desktop%
+cd "%desktop%"
 powershell %desktop%\goodls.exe -u https://drive.google.com/file/d/1TNu1Sb894j9L6PVhZ9PK8FwkBgGKU8vs/view?usp=sharing -f acrobat.zip
 powershell -Command "Expand-Archive acrobat.zip" 
 "%desktop%acrobat\Adobe Acrobat\Setup.exe"
 
 :installUpdate
-cd %desktop%
+cd "%desktop%"
 wget --no-check-certificate https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/%ver%/AcrobatDCUpd%ver%.msp -O acrobatUpdate.msp
 .\acrobatUpdate.msp 
 
 :active
-cd %desktop%
+cd "%desktop%"
 wget --no-check-certificate https://github.com/Zenfection/window/files/7353857/adobe.snr.patch.v2.0-painter.zip
 powershell -Command "Expand-Archive adobe.snr.patch.v2.0-painter.zip"
 adobe.snr.patch.v2.0-painter\adobe.snr.patch.v2.0-painter.exe
@@ -55,12 +55,12 @@ powershell rm -r adobe.snr.patch.v2.0-painter.zip
 
 
 :delete
-cd %desktop%
+cd "%desktop%"
 if exist acrobat.zip powershell rm -r acrobat.zip
 if exist acrobat powershell rm -r acrobat
 if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
 
 :end
-if exist %cur%\adobe_acrobat.bat del %cur%\adobe_acrobat.bat
+if exist "%cur%\adobe_acrobat.bat" del "%cur%\adobe_acrobat.bat"
 PAUSE
 EXIT
