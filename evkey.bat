@@ -25,9 +25,8 @@ powershell -Command "Expand-Archive EVKey.zip -DestinationPath C:\EVKey"
 cd "%desktop%"
 if exist EVKey.zip powershell rm -r EVKey.zip
 if exist EVKey powershell rm -r EVKey
-"C:/EVkey/EVKey64.exe" 
-if exist "%cur%\evkey.bat" powershell rm -r "%cur%\evkey.bat"
 
 
 :end
+if exist "%cur%\evkey.bat" powershell rm -r "%cur%\evkey.bat" && "C:/EVkey/EVKey64.exe" 
 pause
