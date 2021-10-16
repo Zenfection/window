@@ -6,7 +6,7 @@ SET cur=%cd%
 SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 
-goto checkVer
+goto check
 goto install
 goto active
 goto delete
