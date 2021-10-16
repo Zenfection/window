@@ -3,7 +3,6 @@
 SET desktop=C:\Users\%username%\Desktop
 SET cur=%cd%
 
-goto goodls
 goto install
 goto active
 goto end
