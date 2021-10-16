@@ -18,7 +18,7 @@ goto end
 if exist "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" goto checkVer
 
 :checkVer
-"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\Users\zen\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" > temp.txt
+"%home%\sigcheck.exe" -accepteula -nobanner -n "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium\converter.exe" > temp.txt
 set /p currentVer=<temp.txt
 del temp.txt
 rem --can change version--
@@ -31,7 +31,7 @@ if %currentVer% == %ver% (
 
 :install
 cd "%desktop%"
-powershell "%desktop%\goodls.exe" -u https://drive.google.com/file/d/1sYUYOFSVIKC0OnraxDjJQ_ZuGe9S6fhD/view?usp=sharing -f movavi.zip
+
 powershell -Command "Expand-Archive movavi.zip"
 "%desktop%\movavi\Setup.exe"
 
