@@ -29,6 +29,7 @@ sudo move %desktop%\minitool\active\partitionwizard.exe.mfh "C:\Program Files\Mi
 
 :delete
 cd %desktop%
+powershell rm -r goodls.exe
 powershell rm -r minitool.zip 
 powershell rm -r minitool
 
