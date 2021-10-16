@@ -39,5 +39,12 @@ if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EVKey.lnk"(
 ) 
 
 :end
+if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EVKey.lnk"(
+    echo Install EVkey Successful, Open it in Desktop
+    pause
+) else (
+    echo Install Failed, Let tell me !!!!
+    pause
+) 
 if exist "%cur%\evkey.bat" del "%cur%\evkey.bat" 
 pause
