@@ -41,3 +41,10 @@ curl https://raw.githubusercontent.com/Zenfection/window/main/minitool.bat -O -L
 curl https://raw.githubusercontent.com/Zenfection/window/main/movavi.bat -O -L
 "%cd%\movavi.bat"
 ```
+
+## Action Video (`4.22.0`)
+
+```sh
+curl https://raw.githubusercontent.com/Zenfection/window/main/action.bat -O -L
+"%cd%\action.bat"
+```
