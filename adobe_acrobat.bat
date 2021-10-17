@@ -61,10 +61,10 @@ del fixAcrobat_x64.reg
 cd "%desktop%"
 if exist acrobat.zip powershell rm -r acrobat.zip
 if exist acrobat powershell rm -r acrobat
-if exist acrobatUpdate.msp powershell rm -r acrobatUpdate.msp
+if exist acrobatUpdate.msp del acrobatUpdate.msp
 
 :end
 echo Press any key to quit...
 pause >nul
-if exist "%cur%\adobe_acrobat.bat" powershell rm -r "%cur%\adobe_acrobat.bat"
+if exist "%cur%\adobe_acrobat.bat" del "%cur%\adobe_acrobat.bat"
 EXIT
