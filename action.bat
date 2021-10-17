@@ -38,11 +38,12 @@ action\Setup.exe
 
 :active
 cd "%desktop%"
-sudo move action\Action_Loader.exe "C:\Program Files (x86)\Mirillis\Action!"
+sudo move action\active\Action_Loader.exe "C:\Program Files (x86)\Mirillis\Action!"
 sudo copy action\active\Action!.lnk "%desktop%\Action!.lnk"
 sudo move action\active\Action!.lnk "C:\Users\zen\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Mirillis\Action!"
 
 :delete
+cd "%desktop%"
 if exist action.zip powershell rm -r active.zip
 if exist action powershell rm -r active
 
