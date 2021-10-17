@@ -9,6 +9,7 @@ SET desktop=C:\Users\%username%\Desktop
 goto check
 goto install
 goto active
+goto delete
 goto end
 
 
@@ -25,7 +26,6 @@ if %currentVer% == %ver% (
    echo Movavi Video Convert Premium installed newest version !!!
    goto end
 )
-
 
 
 :install
