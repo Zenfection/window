@@ -1,12 +1,32 @@
 @echo off
 
-SET desktop=C:\Users\%username%\Desktop
+SET ver=12.5.0
 SET cur=%cd%
 SET tag=1.1
+SET home=C:\ToolZen
+SET desktop=C:\Users\%username%\Desktop
 
+goto check
 goto install
 goto active
 goto end
+
+
+:check
+if exist "C:\Program Files\MiniTool Partition Wizard 12\partitionwizard.exe" goto checkVer
+
+:checkVer
+%home%\sigcheck.exe -accepteula -nobanner -n  "C:\Program Files\MiniTool Partition Wizard 12\partitionwizard.exe" > temp.txt
+set /p currentVer=<temp.txt
+del temp.txt
+rem --can change version--
+set currentVer=%currentVer:~0,6% 
+if %currentVer% == %ver% (
+   echo Movavi Video Convert Premium installed newest version !!!
+   goto end
+)
+
+
 
 :install
 cd "%desktop%"

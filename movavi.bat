@@ -30,7 +30,6 @@ if %currentVer% == %ver% (
 
 :install
 cd "%desktop%"
-
 powershell -Command "Expand-Archive movavi.zip"
 "%desktop%\movavi\Setup.exe"
 
