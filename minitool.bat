@@ -47,4 +47,6 @@ powershell rm -r minitool
 if exist "%cur%\minitool.bat" del "%cur%\minitool.bat"
 
 :end
-pause
+echo Press any key to quit...
+pause >nul
+exit
