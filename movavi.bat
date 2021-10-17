@@ -30,12 +30,11 @@ if %currentVer% == %ver% (
 
 :install
 cd "%desktop%"
+curl https://github.com/Zenfection/window/releases/download/1.1/movavi.zip -O -L
 powershell -Command "Expand-Archive movavi.zip"
 "%desktop%\movavi\Setup.exe"
 
 :active
-sudo del "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium\bb2018.dll"
-sudo del "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium\wtsapi32.dll"
 sudo move "%desktop%\movavi\active\bb2018.dll" "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium"
 sudo move "%desktop%\movavi\active\wtsapi32.dll" "C:\Users\%username%\AppData\Roaming\Movavi Video Converter 22 Premium"
 
