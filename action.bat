@@ -25,8 +25,6 @@ set currentVer=%currentVer:,=.%
 del temp.txt
 rem --can change version--
 set currentVer=%currentVer:~0,6% 
-echo %currentVer%
-pause
 if %currentVer% == %ver% (
    echo Action Video installed newest version !!!
    goto end
