@@ -1,7 +1,7 @@
 @echo off
 
 title Install EVkey
-SET tag=1.1
+SET tag=2.0
 SET ver=4.3.7
 SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop

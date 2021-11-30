@@ -1,6 +1,6 @@
 @echo off
 
-SET tag=1.1
+SET tag=2.0
 SET ver=4.5.0
 SET cur=%cd%
 SET home=C:\ToolZen

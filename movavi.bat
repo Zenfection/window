@@ -1,7 +1,7 @@
 @echo off
 title Install Movavi Video Convert Premium
 
-SET tag=1.1
+SET tag=2.0
 SET ver=22.0
 SET cur=%cd%
 SET home=C:\ToolZen

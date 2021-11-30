@@ -2,7 +2,7 @@
 
 SET ver=5.9.1.583
 SET cur=%cd%
-SET tag=1.1
+SET tag=2.0
 SET home=C:\ToolZen
 SET desktop=C:\Users\%username%\Desktop
 

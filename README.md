@@ -3,6 +3,12 @@
 ## Must Have
 
 ```sh
+mkdir C:\ToolZen
+curl -o C:\ToolZen\sigcheck.exe https://github.com/Zenfection/window/releases/download/2.0/sigcheck.exe -O -L
+```
+
+
+```sh
 curl https://raw.githubusercontent.com/Zenfection/window/main/check.bat -O -L
 "%cd%\check.bat"
 ```

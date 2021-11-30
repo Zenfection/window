@@ -1,7 +1,7 @@
 @echo off
 title Basic Tool Zen
 
-SET tag=1.1
+SET tag=2.0
 SET desktop=C:\Users\%username%
 SET cur=%cd%
 

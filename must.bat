@@ -2,7 +2,7 @@
 title Basic Tool Zen
 
 set cur=%cd%
-set tag=1.1
+set tag=2.0
 set home=C:\ToolZen
 where choco > temp.txt
 set /p choco=<temp.txt

@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-SET tag=1.1
+SET tag=2.0
 SET ver=21.7.20099
 SET cur=%cd%
 SET home=C:\ToolZen
