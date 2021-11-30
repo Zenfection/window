@@ -20,6 +20,7 @@ if not exist "C:\EVKey\EVKey64.exe" (
 :check 
 if exist "C:\EVKey\EVKey64.exe" goto checkVer
 
+
 :checkVer
 %home%\sigcheck.exe -accepteula -nobanner -n "C:\EVKey\EVKey64.exe" > temp.txt
 set /p currentVer=<temp.txt
@@ -36,8 +37,8 @@ cd "%desktop%"
 curl https://github.com/Zenfection/window/releases/download/%tag%/EVKey.zip -O -L
 if not exist C:\EVKey mkdir C:\EVKey
 powershell -Command "Expand-Archive EVKey.zip -DestinationPath C:\EVKey"
-sudo copy "C:\EVkey\EVkey.lnk" "%desktop%\EVkey.lnk"
-sudo move "C:\EVkey\EVkey.lnk"  "C:\ProgramData\Microsoft\Windows\Start Menu\Programs"
+copy "C:\EVkey\EVkey.lnk" "%desktop%\EVkey.lnk"
+move "C:\EVkey\EVkey.lnk"  "C:\ProgramData\Microsoft\Windows\Start Menu\Programs"
 
 :delete
 cd "%desktop%"
