@@ -22,6 +22,5 @@ jobs:
         with:
           vt_api_key: ${{ secrets.VT_API_KEY }}
           vt_monitor: true
-          monitor_path: /ghaction-virustotal
           files: |
-            *.zip$
+            .zip$
