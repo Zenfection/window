@@ -24,4 +24,4 @@ jobs:
           vt_monitor: true
           monitor_path: /ghaction-virustotal
           files: |
-            .*.zip$
+            *.zip$
