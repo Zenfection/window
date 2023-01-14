@@ -3,6 +3,8 @@ name: build
 on:
   pull_request:
   push:
+  release:
+    types: [created, edited, deleted]
 
 jobs:
   build:
@@ -17,8 +19,7 @@ jobs:
       -
         name: Build
         run: |
-          GOOS=windows GOARCH=386 go build -o ./ghaction-virustotal-win32.exe -v -ldflags "-s -w"
-          GOOS=windows GOARCH=amd64 go build -o ./ghaction-virustotal-win64.exe -v -ldflags "-s -w"
+          GOOS=windows GOARCH=amd64 go build -o ./*.zip -v -ldflags "-s -w"
       -
         name: VirusTotal Monitor Scan
         uses: crazy-max/ghaction-virustotal@v3
@@ -27,4 +28,4 @@ jobs:
           vt_monitor: true
           monitor_path: /ghaction-virustotal
           files: |
-            ./*.zip
+            .*.zip$
