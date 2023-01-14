@@ -1,28 +1,40 @@
-name: build
+name: Release
 
 on:
-  pull_request:
-  push:
   release:
     types: [published]
-  branch_protection_rule:
-    types: [created, editied]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  release:
+    name: Update GitHub Release
+    runs-on: windows-latest
     steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v3
-      -
-        name: Set up Go
-        uses: actions/setup-go@v3
-      -
-        name: VirusTotal Monitor Scan
-        uses: crazy-max/ghaction-virustotal@v3
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          vt_api_key: ${{ secrets.VT_API_KEY }}
-          vt_monitor: true
+          node-version: 'lts/*'
+          registry-url: https://registry.npmjs.org
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+
+      - name: Update release
+        uses: ncipollo/release-action@v1.11.2
+        with:
+          allowUpdates: ${{ true }}
+          artifacts: 'artifacts/release.zip'
+          tag: ${{ env.GITHUB_REF_NAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload adapter zip file to VirusTotal
+        if: '!github.event.release.prerelease'
+        id: virustotal-scan
+        uses: crazy-max/ghaction-virustotal@v3.2.0
+        with:
           files: |
-            ./NetLimiter_5.1.7.zip
+            .zip$
+          vt_api_key: ${{ secrets.VIRUSTOTAL_API_KEY }}
