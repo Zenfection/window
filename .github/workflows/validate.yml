@@ -17,10 +17,6 @@ jobs:
         name: Set up Go
         uses: actions/setup-go@v3
       -
-        name: Build
-        run: |
-          GOOS=windows GOARCH=amd64 go build -o ./*.zip -v -ldflags "-s -w"
-      -
         name: VirusTotal Monitor Scan
         uses: crazy-max/ghaction-virustotal@v3
         with:
